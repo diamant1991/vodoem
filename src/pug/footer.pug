@@ -1,0 +1,23 @@
+.footer
+	.container
+		.row.no-gutters.justify-content-between.align-items-center
+			a(href="#").up-button.middle.visible-xs
+				span.caret-icon.middle
+				span.middle Наверх
+			include logo
+			.footer__social.visible-xs
+				a(href="#").social__item.social__item--instagram.middle
+				a(href="#").social__item.social__item--vk.middle
+			.footer__info
+				a(href="#").up-button.middle.hidden-xs
+					span.caret-icon.middle
+					span.middle Наверх
+				.footer__contacts
+					+ footer-contact('+7 (831) 42-45-123')
+					+ footer-contact('gt2004@yandex.ru')
+					+ footer-contact('Невзоровых 66-а')
+				.copyright
+					| © 2018 все права защищены
+			.footer__social.hidden-xs
+				a(href="#").social__item.social__item--instagram.social__item--footer
+				a(href="#").social__item.social__item--vk.social__item--footer

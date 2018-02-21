@@ -1,0 +1,11 @@
+mixin form-item(title, name, id1, id2)
+	.calc-form__item
+		.calc-form__header
+			h4.form-title= title
+		.radio
+			.radio__item.middle
+				input.input-radio(type="radio" name=name id=id1)&attributes(attributes)
+				label(for=id1) да
+			.radio__item.middle
+				input.input-radio(type="radio" name=name id=id2)&attributes(attributes)
+				label(for=id2) нет

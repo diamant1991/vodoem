@@ -1,0 +1,44 @@
+.modal.fade#get-call(role="dialog")
+	.modal-dialog
+		.modal-content
+			a(href="#", data-dismiss="modal", aria-label="Close").modal-close
+			.modal-form
+				form
+					.form-group
+						input(type="text", placeholder="Введите Ваше имя").form-control.form-control--modal
+					.form-group
+						input(type="text", placeholder="Телефон").form-control.form-control--modal
+					.form-group
+						.form-descr
+							| По этому телефону мы свяжемся с Вами, чтобы уточнить детали
+					.form-group
+						button(type="submit").button.button--full получить консультацию
+				.modal-form__footer
+					| Нажимая на кнопку, Вы даете согласие на обработку своих персональных данных согласно с 
+					a(href="#") политикой конфедициальности
+
+
+.modal.fade#calculation(role="dialog")
+	.modal-dialog.modal-dialog--calc
+		.modal-content.modal-content--calc
+			a(href="#", data-dismiss="modal", aria-label="Close").modal-close.modal-close--white
+			h2.item-title.item-title--modal Калькулятор расчета
+			form
+				.calc-form.row.no-gutters.justify-content-between
+					div
+						.calc-form__item
+							.calc-form__header.calc-form__header--size
+								h4.form-title Размеры водоема:
+							.radio
+								+size-item('Ширина')
+								+size-item('Длина')
+								+size-item('Глубина')
+						+form-item('Наличие грунтовых вод', 'radio3', 'radio5', 'radio6')
+						+form-item('Водоем для плаванья', 'radio5', 'radio9', 'radio10')
+					div
+						+form-item('Водоем для разведения рыбы', 'radio2', 'radio3', 'radio4')
+						+form-item('Декоративный водоем', 'radio4', 'radio7', 'radio8')
+						+form-item('Наличие очисного оборудования', 'radio6', 'radio11', 'radio12')
+				button(type="submit").button.button--full.button--calc Расчитать
+
+

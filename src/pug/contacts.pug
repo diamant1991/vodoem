@@ -1,0 +1,23 @@
+.contacts(style="background-image: url(images/contacts.jpg)")
+	.container
+		h2.item-title Контакты
+		.contacts__info.row.no-gutters.justify-content-between
+			+ contact-item(
+				'images/gps.png', 
+				'Г. Санкт-Петербург, Пискаревский пр. д. 65 ТЦ “Барс”, офис 555'
+			)
+			+ contact-item(
+				'images/email.png', 
+				'web@gmail.com'
+			)
+			+ contact-item(
+				'images/phone.png', 
+				'+7 965 999-99-90'
+			) 
+		include social
+		.contacts__question
+			.contacts__question__title
+				h3 Остались вопросы? 
+				p Закажите звонок и мы свяжемся с Вами в течении часа.
+			a(href="#").btn.btn--middle Задайте их архитектору
+

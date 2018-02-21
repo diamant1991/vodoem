@@ -1,0 +1,13 @@
+.map{
+	height: 460px;
+	position: relative;
+	background: url(../images/marp.jpg);
+	z-index: 2;
+}
+.marker{
+	cursor: pointer;
+	position: absolute;
+	z-index: 2;
+	right: 20%;
+	top: 50px;
+}

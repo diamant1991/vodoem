@@ -1,0 +1,22 @@
+header.header
+	.container
+		.row.no-gutters.justify-content-between.align-items-center
+			include logo
+			.hamburger-box.visible-sm
+				.hamburger-inner
+			nav.nav#nav           
+				ul.nav__menu.clearfix
+					li.visible-exs
+						| +7 965 999-99-90
+					li.visible-sm
+						a(href="#", data-toggle="modal", data-target="#get-call") Заказать звонок
+					+item('Калькулятор')
+					+item('Акция')
+					+item('оборудование')
+					+item('Контакты')
+					+item-drop('Стоимость', 'водоём 5х10')
+			.phone.hidden-exs
+				.phone__number
+					| +7 965 999-99-90
+				a(href="#", data-toggle="modal", data-target="#get-call").get-call.hidden-sm
+					| Заказать звонок

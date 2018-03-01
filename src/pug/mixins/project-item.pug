@@ -1,0 +1,17 @@
+mixin project-item(pos, group)
+	.col-lg-4.col-md-6
+		a(href=pos, data-fancybox=group)&attributes(attributes)
+			.project-img(style="background-image: url("+ pos +")")
+		.project-descr
+			div 
+				| Описание водоема: 
+				b рыба текст
+			div 
+				| Местоположение: 
+				b г. Бор
+			div 
+				| Размер: 
+				b 40х20м
+			div 
+				| Цена: 
+				b 50 000р.

@@ -38,6 +38,20 @@ if (window.matchMedia('(max-width: 991px)').matches) {
 		}
 	});
 }
+$('.link--more').click(function (e) {
+	e.preventDefault();
+	$('.header').addClass('high-index');
+	$('.project-modal').addClass('show-modal');
+	$('body').addClass('project-modal-open');
+});
+$('.project-close').click(function (e) {
+	e.preventDefault();
+	if ($('.header').hasClass('high-index')) {
+		$('.header').removeClass('high-index');
+	}
+	$('.project-modal').removeClass('show-modal');
+	$('body').removeClass('project-modal-open');
+});
 
 }());
 //# sourceMappingURL=main.js.map

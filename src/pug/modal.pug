@@ -1,4 +1,4 @@
-.modal.fade#get-call(role="dialog")
+.modal.modal--call.fade#get-call(role="dialog")
 	.modal-dialog
 		.modal-content
 			a(href="#", data-dismiss="modal", aria-label="Close").modal-close
@@ -41,4 +41,17 @@
 						+form-item('Наличие очисного оборудования', 'radio6', 'radio11', 'radio12')
 				button(type="submit").button.button--full.button--calc Расчитать
 
-
+.project-modal
+	.container
+		h2.item-title.item-title--center От проектирования до воплощения
+		include social
+		.row.project-wrapp
+			+project-item('images/slide2.jpg', 'group')
+			+project-item('images/slide3.jpg', 'group')
+			+project-item('images/slide2.jpg', 'group')
+			+project-item('images/slide3.jpg', 'group')
+			+project-item('images/slide2.jpg', 'group')
+			+project-item('images/slide3.jpg', 'group')
+		a.project-close.middle
+			span.caret-icon.middle
+			span.middle Закрыть

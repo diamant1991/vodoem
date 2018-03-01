@@ -39,6 +39,10 @@
 	font-size: 36px;
 	text-transform: uppercase;
 
+	&--center{
+		text-align: center;
+	}
+
 	&:after{
 		content: "";
 		display: block;

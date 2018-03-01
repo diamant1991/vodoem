@@ -65,6 +65,26 @@
 	font-size: 18px;
 	text-transform: uppercase;
 	border-radius: 50px;
+
+	&:hover{
+		background: lighten(#000, 20%);
+	}
+}
+.project-close{
+	text-align: center;
+	width: 210px;
+	padding: 15px;
+	color: #fff;
+	background: #000;
+	border: 1px solid #fff;
+	font-size: 18px;
+	text-transform: uppercase;
+	border-radius: 50px;
+	cursor: pointer;
+
+	&:hover{
+		background: lighten(#000, 20%);
+	}
 }
 .caret-icon{
 	width: 13px;

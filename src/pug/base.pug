@@ -5,6 +5,7 @@ include mixins/contact-item.pug
 include mixins/footer-contact.pug
 include mixins/form-item.pug
 include mixins/size-item.pug
+include mixins/project-item.pug
 
 block vars
 	-
@@ -254,5 +255,6 @@ html(class=html.classList)&attributes(html.attrs)
 		block content
 		block scripts
 			script(src="js/vendor.js?v=" + Date.now())
+			script(src="js/jquery.fancybox.min.js")
 			script(src="js/main.js?v=" + Date.now())
 		block body-end

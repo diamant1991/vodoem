@@ -1,6 +1,13 @@
 body{
 	font-family: $regular;
 	background: $color-main;
+
+	&.project-modal-open{
+		overflow: hidden;
+	}
+}
+b{
+	font-weight: bold;
 }
 .header{
 	background: $bg-header;
@@ -12,6 +19,10 @@ body{
 	top: 0;
 	width: 100%;
 	border-bottom: 1px solid #fff;
+
+	&.high-index{
+		z-index: 1051;
+	}
 }
 .nav{
 	&__menu{

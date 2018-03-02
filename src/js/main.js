@@ -1,5 +1,3 @@
-
-
 $('.up-button').click(function(e) {
 	e.preventDefault()
 	$('body,html').animate({scrollTop:0},800);
@@ -53,3 +51,10 @@ $('.project-close').click(function(e) {
 	$('.project-modal').removeClass('show-modal')
 	$('body').removeClass('project-modal-open')
 });
+
+if(window.matchMedia('(min-width: 992px)').matches){
+	$('.main-content-wrapper').stickyStack({
+	containerElement:	'.main-content-wrapper',
+	stackingElement:	'.slider'
+});
+}

@@ -1,27 +1,33 @@
 body{
 	font-family: $regular;
 	background: $color-main;
+	position: relative;
 
 	&.project-modal-open{
 		overflow: hidden;
 	}
 }
-b{
-	font-weight: bold;
+b,
+strong{
+	font-family: $bold;
+}
+.table-cell{
+	display: table-cell;
+	vertical-align: middle;
 }
 .header{
 	background: $bg-header;
 	color: #fff;
 	padding: 25px 0;
 	position: fixed;
-	z-index: 10;
+	z-index: 101;
 	left: 0;
 	top: 0;
 	width: 100%;
 	border-bottom: 1px solid #fff;
 
 	&.high-index{
-		z-index: 1051;
+		z-index: 1030;
 	}
 }
 .nav{

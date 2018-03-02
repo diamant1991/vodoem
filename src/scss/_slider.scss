@@ -5,8 +5,9 @@
 	position: relative;
 	background: $color-main;
 	z-index: 2;
-	// margin-bottom: 15px;
-	// border-bottom: 1px solid #fff;
+	margin-bottom: 15px;
+	border-top: 1px solid #fff;
+	width: 100%;
 
 	&__item{
 		height: 100%;
@@ -31,14 +32,33 @@
 	&__title{
 		color: #fff;
 		text-align: center;
-		position: fixed;
+		position: absolute;
 		width: 100%;
 		left: 0;
-		z-index: 0;
+		z-index: 2;
 		top: 50%;
 		transform: translate(0, -50%);
 	}
+	&--top{
+		top: 0;
 
+		&:before{
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+			background: rgba(42,44,50,0.5);
+		}
+	}
+	&--bottom{
+		padding-top: 10px;
+
+		.slider__item{
+			border-top: 1px solid #fff;
+		}
+	}
 	h2{
 		font-size: 70px;
 		text-transform: uppercase;
@@ -68,11 +88,13 @@
 	}
 }
 .description{
-	background: $color-main;
+	background: $bg-descr;
 	color: #fff;
 	padding: 40px 0;
-	position: relative;
+	position: absolute;
 	z-index: 2;
+	bottom: 50px;
+	width: 100%;
 
 	&__info{
 		max-width: 660px;
@@ -182,7 +204,7 @@
 		}
 	}
 	.slick-dots{
-		display: none;
+		display: none !important;
 	}
 }
 @media(max-width: 767px){

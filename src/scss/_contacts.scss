@@ -59,6 +59,25 @@
 			content: none;
 		}
 	}
+	&--sale{
+		line-height: 1.3;
+		text-transform: none;
+		margin: 0;
+
+		b{
+			display: block;
+			text-transform: uppercase;
+			color: #ff3300;
+			font-family: $bold;
+		}
+		span{
+			color: $color-yellow;
+		}
+
+		&:after{
+			content: none;
+		}
+	}
 }
 h3{
 	font-size: 24px;

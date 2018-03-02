@@ -4,6 +4,11 @@
   src: url("../fonts/GOTHIC.eot");
   src: url("../fonts/GOTHIC.eot") format("embedded-opentype"), url("../fonts/GOTHIC.woff2") format("woff2"), url("../fonts/GOTHIC.woff") format("woff"), url("../fonts/GOTHIC.ttf") format("truetype"), url("../fonts/GOTHIC.svg#GOTHIC") format("svg"); }
 
+@font-face {
+  font-family: 'GOTHICB';
+  src: url("../fonts/GOTHICB.eot");
+  src: url("../fonts/GOTHICB.eot") format("embedded-opentype"), url("../fonts/GOTHICB.woff2") format("woff2"), url("../fonts/GOTHICB.woff") format("woff"), url("../fonts/GOTHICB.ttf") format("truetype"), url("../fonts/GOTHICB.svg#GOTHICB") format("svg"); }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -4211,25 +4216,31 @@ li.fancybox-thumbs-loading {
 
 body {
   font-family: "GOTHIC";
-  background: #2a2c32; }
+  background: #2a2c32;
+  position: relative; }
   body.project-modal-open {
     overflow: hidden; }
 
-b {
-  font-weight: bold; }
+b,
+strong {
+  font-family: "GOTHICB"; }
+
+.table-cell {
+  display: table-cell;
+  vertical-align: middle; }
 
 .header {
   background: rgba(42, 44, 50, 0.9);
   color: #fff;
   padding: 25px 0;
   position: fixed;
-  z-index: 10;
+  z-index: 101;
   left: 0;
   top: 0;
   width: 100%;
   border-bottom: 1px solid #fff; }
   .header.high-index {
-    z-index: 1051; }
+    z-index: 1030; }
 
 .nav__menu {
   font-size: 14px; }
@@ -4510,6 +4521,36 @@ b {
     min-height: 100vh;
     padding-top: 210px;
     padding-bottom: 100px; }
+  .modal-content--sale {
+    background: none;
+    padding: 0; }
+  .modal-content--equipment {
+    background: none;
+    text-align: left;
+    color: #fff;
+    padding: 45px 60px; }
+    .modal-content--equipment .item-title {
+      text-align: center; }
+
+.modal-wrapper {
+  padding: 80px 65px;
+  position: relative;
+  background: #fff;
+  max-width: 500px;
+  margin: auto; }
+
+.sale-content {
+  color: #fff;
+  text-align: center; }
+
+.sale-info {
+  font-size: 18px;
+  line-height: 1.3;
+  max-width: 500px;
+  margin: 40px auto; }
+  .sale-info a {
+    color: #efd99b;
+    border-bottom: 1px solid #efd99b; }
 
 .modal-backdrop {
   position: fixed;
@@ -4656,6 +4697,18 @@ b {
 .project-wrapp {
   margin-top: 20px; }
 
+.pdf__icon {
+  width: 110px; }
+
+.pdf__item {
+  font-size: 24px; }
+  .pdf__item + .pdf__item {
+    margin-top: 25px; }
+  .pdf__item a {
+    color: #fff; }
+    .pdf__item a:hover {
+      color: #efd99b; }
+
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 500px;
@@ -4663,22 +4716,35 @@ b {
 
 @media (min-width: 992px) {
   .modal-dialog--calc {
-    max-width: 1000px; } }
+    max-width: 1000px; }
+  .modal-dialog--sale {
+    max-width: 640px; } }
 
 @media (max-width: 991px) {
   .modal-dialog--calc {
     max-width: 700px; }
   .modal-content--calc,
-  .modal-content {
+  .modal-content,
+  .modal-wrapper {
     padding: 20px;
     padding-top: 50px; }
+  .pdf__item {
+    font-size: 18px; }
+  .pdf__icon {
+    width: 45px;
+    padding-right: 10px; }
+  .modal-content--sale {
+    padding: 10px 5px; }
   .modal {
     padding-right: 0 !important; }
   .modal-close {
     width: 25px;
     height: 25px;
     -moz-background-size: contain !important;
-         background-size: contain !important; } }
+         background-size: contain !important; }
+  .sale-info {
+    font-size: 16px;
+    margin: 20px auto; } }
 
 @media (max-width: 767px) {
   .form-title {
@@ -4687,7 +4753,9 @@ b {
     font-size: 16px; }
   .project-modal {
     padding-top: 160px;
-    padding-bottom: 60px; } }
+    padding-bottom: 60px; }
+  .pdf__item {
+    font-size: 16px; } }
 
 @media (max-width: 575px) {
   .item-title {
@@ -4797,7 +4865,10 @@ b {
   height: 100vh;
   position: relative;
   background: #2a2c32;
-  z-index: 2; }
+  z-index: 2;
+  margin-bottom: 15px;
+  border-top: 1px solid #fff;
+  width: 100%; }
   .slider__item {
     height: 100%; }
   .slider__img {
@@ -4818,16 +4889,30 @@ b {
   .slider__title {
     color: #fff;
     text-align: center;
-    position: fixed;
+    position: absolute;
     width: 100%;
     left: 0;
-    z-index: 0;
+    z-index: 2;
     top: 50%;
     -webkit-transform: translate(0, -50%);
        -moz-transform: translate(0, -50%);
         -ms-transform: translate(0, -50%);
          -o-transform: translate(0, -50%);
             transform: translate(0, -50%); }
+  .slider--top {
+    top: 0; }
+    .slider--top:before {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background: rgba(42, 44, 50, 0.5); }
+  .slider--bottom {
+    padding-top: 10px; }
+    .slider--bottom .slider__item {
+      border-top: 1px solid #fff; }
   .slider h2 {
     font-size: 70px;
     text-transform: uppercase;
@@ -4853,11 +4938,13 @@ b {
       margin-left: 25px; }
 
 .description {
-  background: #2a2c32;
+  background: rgba(42, 44, 50, 0.8);
   color: #fff;
   padding: 40px 0;
-  position: relative;
-  z-index: 2; }
+  position: absolute;
+  z-index: 2;
+  bottom: 50px;
+  width: 100%; }
   .description__info {
     max-width: 660px;
     font-size: 18px;
@@ -4937,7 +5024,7 @@ b {
   .slider__img {
     background-attachment: fixed; }
   .slick-dots {
-    display: none; } }
+    display: none !important; } }
 
 @media (max-width: 767px) {
   .slider__title {
@@ -4967,7 +5054,17 @@ b {
   padding-top: 20px; }
   .social__item {
     width: 40px;
-    height: 40px; }
+    height: 40px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    -moz-transition: .3s;
+    transition: .3s; }
+    .social__item:hover {
+      -webkit-transform: scale(1.2);
+         -moz-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+           -o-transform: scale(1.2);
+              transform: scale(1.2); }
     .social__item--instagram {
       background: url(../images/instagram.png) no-repeat; }
     .social__item--vk {
@@ -5277,6 +5374,19 @@ b {
     margin-bottom: 45px; }
     .item-title--modal:after {
       content: none; }
+  .item-title--sale {
+    line-height: 1.3;
+    text-transform: none;
+    margin: 0; }
+    .item-title--sale b {
+      display: block;
+      text-transform: uppercase;
+      color: #ff3300;
+      font-family: "GOTHICB"; }
+    .item-title--sale span {
+      color: #efd99b; }
+    .item-title--sale:after {
+      content: none; }
 
 h3 {
   font-size: 24px;
@@ -5332,6 +5442,13 @@ h3 {
   z-index: 2;
   right: 20%;
   top: 50px; }
+
+.bottom-block {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  width: 100%;
+  bottom: 0; }
 
 .footer {
   color: #fff;

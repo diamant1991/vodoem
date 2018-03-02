@@ -18,6 +18,36 @@
 					a(href="#") политикой конфедициальности
 
 
+.modal.modal--call.fade#sale-modal(role="dialog")
+	.modal-dialog.modal-dialog--sale
+		.modal-content.modal-content--sale
+			.sale-content
+				h2.item-title.item-title--sale
+					b Акция! 
+					| Готовые куски ЭПДМ - мембраны со скидкой 
+					span 30%
+					| !
+				.sale-info
+					| Внимание: действие акции ограничено до 31.01.2018. Подробности узнавайте у наших консультантов по телефону 
+					a(href="#") 9(999)888-29-83
+			.modal-wrapper
+				a(href="#", data-dismiss="modal", aria-label="Close").modal-close
+				.modal-form
+					form
+						.form-group
+							input(type="text", placeholder="Введите Ваше имя").form-control.form-control--modal
+						.form-group
+							input(type="text", placeholder="Телефон").form-control.form-control--modal
+						.form-group
+							.form-descr
+								| По этому телефону мы свяжемся с Вами, чтобы уточнить детали
+						.form-group
+							button(type="submit").button.button--full получить консультацию
+					.modal-form__footer
+						| Нажимая на кнопку, Вы даете согласие на обработку своих персональных данных согласно с 
+						a(href="#") политикой конфедициальности
+
+
 .modal.fade#calculation(role="dialog")
 	.modal-dialog.modal-dialog--calc
 		.modal-content.modal-content--calc
@@ -40,6 +70,19 @@
 						+form-item('Декоративный водоем', 'radio4', 'radio7', 'radio8')
 						+form-item('Наличие очисного оборудования', 'radio6', 'radio11', 'radio12')
 				button(type="submit").button.button--full.button--calc Расчитать
+
+
+.modal.fade#equipment(role="dialog")
+	.modal-dialog.modal-dialog--calc
+		.modal-content.modal-content--calc.modal-content--equipment
+			a(href="#", data-dismiss="modal", aria-label="Close").modal-close.modal-close--white
+			h2.item-title.item-title--modal Оборудование 
+			.pdf
+				include pdf-item
+				include pdf-item
+				include pdf-item
+				include pdf-item
+				include pdf-item
 
 .project-modal
 	.container

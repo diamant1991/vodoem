@@ -53,5 +53,12 @@ $('.project-close').click(function (e) {
 	$('body').removeClass('project-modal-open');
 });
 
+if (window.matchMedia('(min-width: 992px)').matches) {
+	$('.main-content-wrapper').stickyStack({
+		containerElement: '.main-content-wrapper',
+		stackingElement: '.slider'
+	});
+}
+
 }());
 //# sourceMappingURL=main.js.map
